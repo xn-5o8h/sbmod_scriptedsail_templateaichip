@@ -1,0 +1,245 @@
+{
+  "itemName": "templateaichip",
+
+  "shortdescription": "Template A.I. Chip",
+  "description": "A template A.I. chip. Can be installed on S.A.I.L.'s terminal.",
+
+  "rarity": "Legendary",
+  "category": "A.I. Chip",
+  "price": 20,
+
+  "tooltipKind": "mm",
+  "largeImage": "/ai/portraits/templatequestportrait.png",
+  "inventoryIcon": "/ai/ai.png",
+
+  "aiData": {
+    // note that those are already defaults and merely serve as to show what can be done;
+    // if you aren't changing them, then remove them so that they don't overwrite another chip's config!
+    // If you're looking for examples, you can look at the japanese language chip A.I., or A.V.I.A.N.'s.
+
+    "aiFrames": "templateAI.png",
+    "staticFrames": "staticTemplate.png",
+    "portraitFrames": "portraits/templateportrait.png",
+    "questPortrait": "template",
+
+    "title": "S.A.I.L.",
+    "subtitle": "Ship-based Artificial Intelligence Lattice",
+    "titleIcon": "/interface/ai/AIicon.png",
+
+    "chatterSound": "/sfx/interface/aichatter1_loop.ogg",
+
+    "defaultAnimation": "idle",
+    "aiAnimations": {
+      "idle": {
+        "frames": "<image>:idle.<index>",
+        "mode": "loopForever",
+        "frameNumber": 21,
+        "animationCycle": 3.0,
+        "centered": false
+      },
+
+      "blink": {
+        "frames": "<image>:blink.<index>",
+        "mode": "stop",
+        "frameNumber": 1,
+        "centered": false
+      },
+
+      "talk": {
+        "frames": "<image>:talk.<index>",
+        "mode": "loopForever",
+        "frameNumber": 2,
+        "animationCycle": 0.5,
+        "centered": false
+      },
+
+      "yell": {
+        "frames": "<image>:yell.<index>",
+        "mode": "loopForever",
+        "frameNumber": 2,
+        "animationCycle": 0.5,
+        "centered": false
+      },
+
+      "refuse": {
+        "frames": "<image>:refuse.<index>",
+        "mode": "loopForever",
+        "frameNumber": 8,
+        "centered": false
+      },
+
+      "unique": {
+        "frames": "<image>:unique.<index>",
+        "mode": "loopForever",
+        "frameNumber": 8,
+        "centered": false
+      }
+    },
+
+    "staticAnimation": {
+      "frames": "<image>:<index>",
+      "mode": "loopForever",
+      "animationCycle": 0.111,
+      "frameNumber": 4,
+      "centered": false
+    },
+
+    "scanlineAnimation": {
+      "frames": "scanlines.png:<index>",
+      "mode": "loopForever",
+      "animationCycle": 0.999,
+      "frameNumber": 14,
+      "centered": false
+    },
+
+    "staticOpacity": 0.2,
+    "scanlineOpacity": 0.5,
+    "charactersPerSecond": 45,
+
+    "noCrewSpeech": {
+      "animation": "refuse",
+      "text": "^#6f6f6f;$ crew\n^cyan;> You are the only registered crew member of this ship.\n> Recruiting additional crew members may allow for increased operational efficiency.",
+      "speedModifier": 0.7
+    },
+
+    "noMissionsSpeech": {
+      "animation": "refuse",
+      "text": "^#6f6f6f;$ missions^cyan;> No mission co-ordinates currently available.",
+      "speedModifier": 0.7
+    },
+
+    "missionsText": {
+      "missionhuman1": {
+        "buttonText": "Erchius Mining Facility",
+        "repeatButtonText": "Revisit the Erchius Mining Facility",
+        "selectSpeech": {
+          "animation": "talk",
+          "text": "This Facility is the central source of Erchius Crystals, which can upgrade your ship's FTL Drive.",
+          "speedModifier": 1.0
+        }
+      },
+      "missionfloran1": {
+        "buttonText": "The Ceremonial Hunting Caverns",
+        "repeatButtonText": "Revisit The Ceremonial Hunting Caverns",
+        "selectSpeech": {
+          "animation": "talk",
+          "text": "Esther's research concludes that this is the probable location of the Floran Artifact.",
+          "speedModifier": 1.0
+        }
+      },
+      "missionhylotl1": {
+        "buttonText": "The Grand Pagoda Library",
+        "repeatButtonText": "Revisit the Grand Pagoda Library",
+        "selectSpeech": {
+          "animation": "talk",
+          "text": "This ancient island complex has been calculated to be the approximate location of the Hylotl Artifact.",
+          "speedModifier": 1.0
+        }
+      },
+      "missionapex1": {
+        "buttonText": "The Miniknog Stronghold",
+        "repeatButtonText": "Revisit the Miniknog Stronghold",
+        "selectSpeech": {
+          "animation": "talk",
+          "text": "Esther has concluded that this Mansion base is the location of the Apex Artifact.",
+          "speedModifier": 1.0
+        }
+      },
+      "missionavian1": {
+        "buttonText": "The Great Sovereign Temple",
+        "repeatButtonText": "Revisit The Great Sovereign Temple",
+        "selectSpeech": {
+          "animation": "talk",
+          "text": "This mostly abandoned temple is Esther's concluded location of the Avian Artifact.",
+          "speedModifier": 1.0
+        }
+      },
+      "missionglitch1": {
+        "buttonText": "The Baron's Keep",
+        "repeatButtonText": "Revisit The Baron's Keep",
+        "selectSpeech": {
+          "animation": "talk",
+          "text": "It seems that the Glitch Artifact belongs to the owner of a small stone Keep on a lonely planet.",
+          "speedModifier": 1.0
+        }
+      },
+      "missionpenguin1": {
+        "buttonText": "Dreadwing",
+        "repeatButtonText": "Rechallenge Dreadwing",
+        "selectSpeech": {
+          "animation": "talk",
+          "text": "The proprietor of the Beak Easy requires assistance. Defeat Dreadwing.",
+          "speedModifier": 1.0
+        }
+      },
+      "missionpenguin2": {
+        "buttonText": "Weapon Testing Site",
+        "repeatButtonText": "Revisit the Weapon Testing Site",
+        "selectSpeech": {
+          "animation": "talk",
+          "text": "Biggy the armourer requires your help.",
+          "speedModifier": 1.0
+        }
+      }
+    },
+
+    "shipStatus": {
+      "0": {
+        "animation": "unique",
+        "text": "> Zzz... Zzz... Zzz...",
+        "speedModifier": 0.7
+      },
+      "1": {
+        "animation": "talk",
+        "text": "^#6f6f6f;$ status^cyan;\n> Ship thrusters are currently offline.\n> Ship teleportation system functioning correctly.\n> ^green;Currently only the planet below is accessible.",
+        "speedModifier": 0.7
+      },
+      "2": {
+        "animation": "talk",
+        "text": "^#6f6f6f;$ status^cyan;\n> Ship thrusters are online.\n> Ship teleportation system functioning correctly.\n> ^green;Planets within this star system are accessible.",
+        "speedModifier": 0.7
+      },
+      "3": {
+        "animation": "talk",
+        "text": "^#6f6f6f;$ status -f^cyan;\n> Ship thrusters are online.\n> FTL drive is online.\n> Ship teleportation system functioning correctly.\n> ^green;The entire universe is accessible.",
+        "speedModifier": 0.7
+      }
+    },
+
+    "interfaceText": {
+      "breadcrumbLeftPadding": 2,
+      "breadcrumbRightPadding": 6,
+      "homeBreadcrumbText": "HOME",
+      "crewBreadcrumbText": "CREW",
+      "configBreadcrumbText": "CONFIG",
+      "missionBreadcrumbText": "MISSION",
+
+      "buttonBackText": "BACK",
+      "buttonOpenCraftingText": "Open A.I. chip crafting",
+      "buttonOpenSlotText": "Open A.I. chip slot",
+      "buttonCloseSlotText": "Close A.I. chip slot",
+      "buttonFallbackText": "Fallback to vanilla S.A.I.L.",
+      "buttonMissionsText": "MISSIONS",
+      "buttonCrewText": "CREW",
+      "buttonCancelText": "CANCEL",
+      "buttonDismissText": "DISMISS",
+      "buttonDeployText": "DEPLOY",
+
+      "overwrittingConfText": ">Overwriting configuration.................",
+      "aiDataText": "^gray;You can install an A.I. chip here to customize S.A.I.L.",
+      "fallbackText": "^gray;Use this if you can't find a mission or crewmember.",
+      "fallbackActivatedText": "^gray;The fallback interface will be loaded upon next interaction.",
+
+      "craftingTitle": "S.A.I.L. A.I. chip crafting",
+      "craftingSubtitle": "",
+      "craftingSchematicsTxt": "SCHEMATICS",
+      "craftingProductTxt": "RESULT",
+      "buttonCraft": "CRAFT",
+      "buttonStopCraft": "STOP",
+      "craftingMatAvailTxt": "MATERIALS AVAILABLE",
+
+      "defaultRecruitDescription": "> No data.",
+      "defaultRecruitName": "Cannon Fodder"
+    }
+  }
+}
